@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonus bar Gasprom</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style_responsive.css">
+    <link rel="icon" type="image/png" href="img/icon.png">
+</head>
+<body>
+<div class="cart_main">   
+ <div class="cart_container_balance">
+  <div class="cart_balance"> 
+   <div>
+   <p>Мой баланс</p>
+   </div>
+   <div class="quantity_coins">
+   <p data-balance="balance" class="cart_coin_blue">99999</p>
+   </div>
+  </div>
+  <div class="cart_transfer_coins">
+  <button class="btn cart_transfer_coins_btn">
+    <p class="cart_coin_white">Перевести</p> 
+  </button>
+  </div>
+ </div>
+ <div class="cart_container_buy">
+  <div class="cart_buy_title">
+   <p>Мой выбор</p>
+  </div>
+  <div class="cart_choice_products">
+   <div class="cart_empty">
+    <p>Ваша корзина пустая</p> 
+   </div>
+   <div class="cart_card_product_wrapper">
+    <div class="cart_card_product">
+     <div class="card_product_info">
+      <p>Рюкзак</p>
+      <div class="card_product_details">
+       <p data-counter>5 шт</p>
+       <span style="font-size: 10px">&#x2715</span>
+       <div class="card_product_price">
+         <p data-price="product_currency" class="cart_coin_gray">100</p>
+        <div class="bucket disabled">
+         <img src="img/bucket.png" alt="bucket" class="bucket_img"/>
+        </div>
+       </div>   
+      </div> 
+     </div>
+     <div>
+      <img src="img/product1.jpg" alt="product_name" class="card_product_img"/>
+     </div>
+    </div>
+    </div>
+  </div>
+  <div class="cart_products_summ">
+   <p>Итого:</p>
+   <p data-summ="cart_summ" class="cart_coin_gray">10</p>
+
+  </div>
+  <div class="cart_submit">
+    <form action="#" method="get" name="buying">
+     <button type="submit" class="btn btn_buying">Подтвердить</button>   
+    </form>
+  </div>
+  <div class="cart_info">
+    <p>После подтверждения вам будет направлена информация, 
+    как получить выбранные вами товары</p> 
+  </div>
+  <div>
+    <button class="btn btn_cart_remove_all">Сбросить выбор</button>
+  </div>
+ </div>
+</div>
+<div class="catalog_main">
+ <div class="catalog_head">
+  <div>
+   <h4>БОНУС-БАР</h4>
+   <h1 class="main_title">СУВЕНИРНАЯ ПРОДУКЦИЯ &laquoГАЗПРОМ НЕФТИ&raquo </h1>
+  </div>
+
+  <div class="filter_wrapper">
+   <label for="filter"><img src="img/filter.png" alt="" class="filter_img"/></label>
+   <select class="filter">
+    <option value="all">all</option>
+    <option value="men's clothing">men's clothing</option>
+    <option value="jewelery">jewelery</option>
+    <option value="electronics">electronics</option>
+    <option value="women's clothing">women's clothing</option>
+  </select>
+  </div>
+
+ </div>
+ <div class="catalog_content_wrapper">
+ </div>
+</div>
+<div class="product_page_main disabled">
+ <div class="product_page_head">
+  <h5>СУВЕНИРНАЯ ПРОДУКЦИЯ &laquoГАЗПРОМ НЕФТИ&raquo </h5>
+  <h2 class="product_page_name">Рюкзак</h2>
+ </div>
+ <div class="product_page_wrapper">
+  <div class="product_page_img_wrapper">
+   <img src="img/product1.jpg" alt="" class="product_page_img"/>
+  </div>
+  <div class="product_page_info_wrapper">
+   <div class="adaptive_description">
+    <div class="product_page_purchase">
+    <div class="product_page_counter">
+     <div class="product_page_quantity">
+      <label>Количество</label>
+      <input type="number" min="1" max="999" class="product_page_quantity_input" placeholder="1 шт"/>
+     </div>
+     <div class="product_page_choice">
+      <button class="btn product_page_choice_btn">Выбрать</button>
+     </div>
+    </div>
+    <div class="product_page_back">
+      <button class="btn product_page_back_btn">Назад в бонус-бар</button></div>
+    </div>
+    <div class="product_page_description">
+    <h3>Описание товара</h3>
+    <p>
+     Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident architecto vitae itaque, dolor temporibus nam fugiat cupiditate soluta ad repellendus rem corporis iste officiis maiores sit molestias, beatae eveniet ex?
+    </p>
+    </div>
+   </div>
+   <div class="product_page_price_wrapper">
+    <p>Стоимость</p>
+    <div class="product_page_price">
+      <p class="catalog_coin_gray">1000</p>
+    </div>
+   </div>
+  </div>
+ </div>
+</div> 
+<script src="./js/getProductdata.js"></script>
+<script src="./js/loadcatalogContent.js"></script> 
+<script src="./js/filter.js"></script>
+<script src="./js/cart.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonus bar Gasprom</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style_responsive.css">
+        <link rel="icon" type="image/png" href="img/icon.png">
+</head>
+<body>
+<div class="cart_main">   
+ <div class="cart_container_balance">
+  <div class="cart_balance"> 
+   <div>
+   <p>Мой баланс</p>
+   </div>
+   <div class="quantity_coins">
+   <p data-balance="balance" class="cart_coin_blue">99999</p>
+   </div>
+  </div>
+  <div class="cart_transfer_coins">
+  <button class="btn cart_transfer_coins_btn">
+    <p class="cart_coin_white">Перевести</p> 
+  </button>
+  </div>
+ </div>
+ <div class="cart_container_buy">
+  <div class="cart_buy_title">
+   <p>Мой выбор</p>
+  </div>
+  <div class="cart_choice_products">
+   <div class="cart_empty">
+    <p>Ваша корзина пустая</p> 
+   </div>
+   <div class="cart_card_product_wrapper">
+<!--    <div class="cart_card_product">
+        <div class="card_product_info">
+         <p>Рюкзак</p>
+         <div class="card_product_details">
+          <p data-counter>5 шт</p>
+          <span style="font-size: 10px">&#x2715</span>
+          <div class="card_product_price">
+            <p data-price="product_currency" class="cart_coin_gray">100</p>
+           <div class="bucket disabled">
+            <img src="img/bucket.png" alt="bucket" class="bucket_img"/>
+           </div>
+          </div>   
+         </div> 
+        </div>
+        <div>
+         <img src="img/product1.jpg" alt="product_name" class="card_product_img"/>
+        </div>
+       </div>
+-->
+   </div>
+  </div>
+  <div class="cart_products_summ">
+   <p>Итого:</p>
+   <p data-summ="cart_summ" class="cart_coin_gray">0</p>
+
+  </div>
+  <div class="cart_submit">
+    <form action="#" method="get" name="buying">
+     <button type="submit" class="btn btn_buying">Подтвердить</button>   
+    </form>
+  </div>
+  <div class="cart_info">
+    <p>После подтверждения вам будет направлена информация, 
+    как получить выбранные вами товары</p> 
+  </div>
+  <div>
+    <button class="btn btn_cart_remove_all">Сбросить выбор</button>
+  </div>
+ </div>
+</div>
+<div class="product_page_main">
+</div>  
+<script src="./js/loadProductPage.js"></script>
+<script src="./js/cart.js"></script>
+</body>
+</html>
+
