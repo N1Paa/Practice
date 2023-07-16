@@ -33,14 +33,12 @@ window.addEventListener('load', () => {
     if (JSON.parse(localStorage.getItem('cart')) !== null) {
     statecart = JSON.parse(localStorage.getItem('cart'));
     };
-    console.log(statecart);
     cartWrapper.innerHTML = "";
     if (statecart.length) {
         statecart.forEach((item) => cartWrapper.innerHTML += createcart(item))
         toggleCartStatus()
     } 
     const cartItems = document.querySelectorAll('.cart_card_product');
-    console.log(cartItems);
     calcCartPrice();   
   });
 

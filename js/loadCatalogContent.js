@@ -1,4 +1,5 @@
 const ProductsList = document.querySelector('.catalog_content_wrapper'); 
+const filter = document.querySelector('.filter');
 
 const createCatalogProductCard = (product) => `
 <a href="product.html" class="product_link" data-id="${product.id}">
@@ -16,6 +17,22 @@ const createCatalogProductCard = (product) => `
 </a>
 `
 
+const createCategories = (categories) => `
+<option>${categories.category}</option>
+`
+
+const fillFilterCategories = (categories) => { 
+   filter.innerHTML = `<option>all</option>`;
+
+   if (categories.length) {
+      categories.forEach((category) => { 
+         if (category.category != filter.lastElementChild.textContent) {
+            filter.innerHTML += createCategories(category);
+         } 
+   });
+   }
+}
+
 //добавление товара в каталог 
 const fillProductsList = (products) => {
    ProductsList.innerHTML = "";
@@ -30,4 +47,5 @@ const fillProductsList = (products) => {
 (async () => {
 await getProductsRequest();
 fillProductsList(state.products);
+fillFilterCategories(state.products);
 })()
