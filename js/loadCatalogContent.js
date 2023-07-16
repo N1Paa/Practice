@@ -1,12 +1,7 @@
 const ProductsList = document.querySelector('.catalog_content_wrapper'); 
 
-const state = {
-
-   products: [],
-}
- 
 const createCatalogProductCard = (product) => `
-<a href="product.html" target="_blank" class="product_link" data-id="${product.id}">
+<a href="product.html" class="product_link" data-id="${product.id}">
 <div class="catalog_card_product" data-category="${product.category}">
    <img src="${product.image}" alt="product" class="catalog_product_img" data-product="img" /> 
    <div class="catalog_product_info">
@@ -36,18 +31,3 @@ const fillProductsList = (products) => {
 await getProductsRequest();
 fillProductsList(state.products);
 })()
-
-
-//Получение API данных товаров
-function getProductsRequest() {
-   return fetch('https://fakestoreapi.com/products', {
-     headers: {
-        "Content-type": "application/json; charset=UTF-8"
-     }
-   })   
-  .then(res => res.json())
-  .then((products) => state.products = state.products.concat(products))
-  }
-
-
-

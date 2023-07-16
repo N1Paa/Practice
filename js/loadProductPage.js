@@ -1,13 +1,5 @@
 const ProductPage = document.querySelector('.product_page_main');
 
-const Url = 'https://fakestoreapi.com/products/' + localStorage.getItem('id');
-
-
-const state = {
-
-   products: [],
-}
-
 const createProductPage = (product) => `
 <div data-id="${product.id}">
  <div class="product_page_head">
@@ -51,28 +43,13 @@ const createProductPage = (product) => `
 `
 
 //добавление страницы товара
-const fillProduct = (products) => {
-   ProductPage.innerHTML = "";
-
-   if (products.length) {
-      products.forEach((product) => ProductPage.innerHTML += createProductPage(product));
-   }
+const fillProduct = (product) => {
+    ProductPage.innerHTML = "";
+    ProductPage.innerHTML += createProductPage(product);
 }
 
 //асинхронный вызов 
 (async () => {
 await getProductRequest();
-fillProduct(state.products);
+fillProduct(state.product[0]);
 })()
-
-
-//получение API данных товара
-function getProductRequest() {
-   return fetch(Url, {
-     headers: {
-        "Content-type": "application/json; charset=UTF-8"
-     }
-   })   
-  .then(res => res.json())
-  .then((products) => state.products = state.products.concat(products))
-  }
